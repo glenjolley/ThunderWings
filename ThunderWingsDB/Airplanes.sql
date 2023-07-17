@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Airplanes]
+(
+	[ID] INT IDENTITY(1,1) CONSTRAINT pk_Airplanes PRIMARY KEY,
+	[Name] NVARCHAR(255) NOT NULL,
+	[TopSpeed] INT NOT NULL,
+	[Price] MONEY NOT NULL
+)

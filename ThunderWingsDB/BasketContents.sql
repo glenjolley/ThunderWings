@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[BasketContents]
+(
+	[ID] INT NOT NULL IDENTITY(1,1) CONSTRAINT pk_BasketContents PRIMARY KEY,
+	[BasketID] INT NOT NULL CONSTRAINT fk_BasketContents_BasketID FOREIGN KEY REFERENCES Baskets(ID),
+	[AirplaneID] INT NOT NULL CONSTRAINT fk_BasketContents_AirplaneID FOREIGN KEY REFERENCES Airplanes(ID),
+	[AddedAt] DATETIME2(0) NOT NULL CONSTRAINT df_BasketContents_AddedAt DEFAULT GETDATE()
+)

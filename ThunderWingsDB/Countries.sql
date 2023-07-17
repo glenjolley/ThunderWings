@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Countries]
+(
+	[ID] INT IDENTITY(1,1) CONSTRAINT pk_Countries PRIMARY KEY,
+	[Name] NVARCHAR(255) NOT NULL,
+	[CountryCode] NVARCHAR(2) NOT NULL
+)

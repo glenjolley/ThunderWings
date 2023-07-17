@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[AirplaneRoles]
+(
+	[ID] INT IDENTITY(1,1) CONSTRAINT pk_AirplaneRoles PRIMARY KEY,
+	[AirplaneID] INT NOT NULL CONSTRAINT fk_AirplaneRoles_AirplaneID FOREIGN KEY REFERENCES Airplanes(ID),
+	[RoleID] INT NOT NULL CONSTRAINT fk_AirplaneRoles_RoleID FOREIGN KEY REFERENCES Roles(ID)
+)
